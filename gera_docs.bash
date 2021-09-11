@@ -2,8 +2,7 @@
 
 # Apresentação e instruções no README.md
 dir_tmp='/tmp/mkdocs'                       # Diretório temporário utilizado durante a geração de build
-# base_path="/opt/gits"                       # Localização dos repositórios
-base_path="/home/puma/a4a/documentation_generator/gits"
+base_path="/opt/gits"                       # Localização dos repositórios
 
 index_html='index.html'                     # Sufixo do arquivo que conterá o html do index de cada doc. tera como prefixo o código da organização. Exemplo: a4a_index.html
 file_index='README.md'                      # Nome do arquivo utilizado no lugar do index.md, que o mkdocs esperaria encontrar.
