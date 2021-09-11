@@ -330,11 +330,3 @@ do
         # criar o index no respectivo diretório
         echo $html_hub > "$dir_tmp/${!home_docs##*/}/${codigo}_$index_html"
 done
-
-# current_time=$(date "+%Y.%m.%d-%H.%M.%S")
-
-# compacta conteúdo
-# zip -r $file_ziped.$current_time.zip $dir_tmp
-
-# sai do diretório temporário e o exclui
-# cd .. && rm -rf $dir_tmp
