@@ -4,7 +4,7 @@
 dir_tmp='/tmp/mkdocs'                       # Diretório temporário utilizado durante a geração de build
 base_path="/opt/gits"                       # Localização dos repositórios
 
-index_html='index.html'                     # Sufixo do arquivo que conterá o html do index de cada doc. tera como prefixo o código da organização. Exemplo: a4a_index.html
+index_html='index.html'                     # Arquivo que conterá o html do index de cada subdominio doc.
 file_index='README.md'                      # Nome do arquivo utilizado no lugar do index.md, que o mkdocs esperaria encontrar.
 path_overrides='overrides'                  # Diretório com arquivos utilizados para sobrescrever partes do tema material
 
@@ -102,7 +102,7 @@ extra:
             if [ -d "$base_path/_${codigo}/$name_repo/docs/pt" ] || [ -d "$base_path/_${codigo}/$name_repo/docs/es" ] || [ -d "$base_path/_${codigo}/$name_repo/docs/en" ]
             then
                 # 'lang' é a variável utilizada no javascript de seleção de linguagem
-                html_hub_li="<li><a href=\"${!home_docs}/$name_repo/'+lang+'/index.html\">$name_repo</a></li>"
+                html_hub_li="<li><a href=\"${!home_docs}/$name_repo/'+lang+'\">$name_repo</a></li>"
 
                 # build para cada linguagem
                 for lang in pt en es
@@ -153,7 +153,7 @@ extra:
                 done
             # build se existir diretório docs e não existir outras linguagens
             else
-                html_hub_li="<li><a href="${!home_docs}/$name_repo/index.html">$name_repo</a></li>"
+                html_hub_li="<li><a href="${!home_docs}/$name_repo">$name_repo</a></li>"
 
                 cp -sr -t $dir_tmp/docs $base_path/_${codigo}/$name_repo/docs/*
                 
@@ -190,7 +190,7 @@ extra:
             fi
         # build se o repositório não estiver usando diretório docs, usando src e/ou data
         else
-            html_hub_li="<li><a href="${!home_docs}/$name_repo/index.html">$name_repo</a></li>"
+            html_hub_li="<li><a href="${!home_docs}/$name_repo">$name_repo</a></li>"
             
             cp -sr -t $dir_tmp/docs $base_path/_${codigo}/$name_repo/*
 
@@ -328,5 +328,5 @@ do
     </html>"
 
         # criar o index no respectivo diretório
-        echo $html_hub > "$dir_tmp/${!home_docs##*/}/${codigo}_$index_html"
+        echo $html_hub > "$dir_tmp/${!home_docs##*/}/$index_html"
 done
