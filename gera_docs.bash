@@ -238,17 +238,17 @@ extra:
         fi
 
         # armazena li na sua respectiva ul
-        if [[ ${!codigo} == $codigoid_a4a ]]
+        if [[ ${codigo} == $codigo_a4a ]]
         then
             html_hub_ul_a4a+=$html_hub_li
 
-        elif [[ ${!codigo} == $codigoid_dg ]]
+        elif [[ ${codigo} == $codigo_dg ]]
         then
             html_hub_ul_dg+=$html_hub_li
-        elif [[ ${!codigo} == $codigoid_osmc ]]
+        elif [[ ${codigo} == $codigo_osmc ]]
         then
             html_hub_ul_osmc+=$html_hub_li
-        elif [[ ${!codigo} == $codigoid_itgs ]]
+        elif [[ ${codigo} == $codigo_itgs ]]
         then
             html_hub_ul_itgs+=$html_hub_li
         fi
