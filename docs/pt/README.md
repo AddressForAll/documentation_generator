@@ -47,7 +47,7 @@ pip install mkdocs-material
 Para executar o script:
 
 ```
-pushd /opt/gits/_a4a/documentation_generator/
+pushd /var/gits/_a4a/documentation_generator/
 bash gera_docs.bash
 ```
 As documentações geradas estarão em `/tmp/mkdocs`, por exemplo:
@@ -79,7 +79,7 @@ As documentações geradas estarão em `/tmp/mkdocs`, por exemplo:
 Para execução local do script:
 
 ```
-base_dir="/opt/gits"
+base_dir="/var/gits"
 
 sudo rm -rf ${base_dir}/
 sudo mkdir -p ${base_dir}/_{a4a,osmc,dg,itgs,okbr}
@@ -102,7 +102,7 @@ No servidor, `git pull` nos repositórios ou removê-los e cloná-los novamente 
 
 
 ```
-base_dir="/opt/gits"
+base_dir="/var/gits"
 
 for folder in a4a/WS a4a/documentation_generator a4a/suporte dg/preserv dg/preserv-BR dg/preserv-CO dg/preserv-PE osmc/BR_IBGE osmc/BR_IBGE_new
 do

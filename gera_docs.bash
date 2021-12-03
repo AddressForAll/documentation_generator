@@ -2,7 +2,7 @@
 
 # Apresentação e instruções no README.md
 dir_tmp='/tmp/mkdocs'                       # Diretório temporário utilizado durante a geração de build
-base_path="/opt/gits"                       # Localização dos repositórios
+base_path="/var/gits"                       # Localização dos repositórios
 
 index_html='index.html'                     # Arquivo que conterá o html do index de cada subdominio doc.
 file_index='README.md'                      # Nome do arquivo utilizado no lugar do index.md, que o mkdocs esperaria encontrar.
